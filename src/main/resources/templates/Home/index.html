@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Webshop Fødevarer og Textil</title>
+</head>
+<body>
+
+<h2>Products:</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    <tr th:each="p : ${products}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.name}"></td>
+        <td th:text="${p.price}"></td>
+    </tr>
+</table>
+
+<!--
+<div th:each="p : ${products}">
+    <span th:text="${p.id}"></span>
+    <span th:text="${p.name}"></span>
+    <span th:text="${p.price}"></span>
+</div>
+-->
+</body>
+</html>
